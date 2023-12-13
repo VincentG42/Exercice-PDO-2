@@ -1,3 +1,4 @@
+
 # PDO - Partie 2 : Écrire des données
 
 **Attention : Exécuter patients.sql avant de commencer les exercices.**
