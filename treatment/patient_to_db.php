@@ -1,6 +1,6 @@
 <?php
 
-require_once('./database_connect.php');
+
 
 
 if (
@@ -17,7 +17,7 @@ if (
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-
+    require_once('./database_connect.php');
 
     $requete = $database->prepare("INSERT INTO patients (lastname, firstname, birthdate, phone, mail) 
                     VALUES (:lastname,:firstname,:birthdate,:phone,:email)");
@@ -32,4 +32,5 @@ if (
 
 }
 
-header('Location: ../index.php');
+header('Location: ../patients/liste-patients.php');
+?>

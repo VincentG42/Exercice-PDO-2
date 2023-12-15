@@ -25,6 +25,7 @@ Créer une page ajout-rendezvous.php et y créer un formulaire permettant de cr�
 
 ## Exercice 6
 
+
 Dans la page liste-rendezvous.php, afficher la liste des rendez-vous. Inclure dans la page, un lien vers la création de rendez-vous.
 
 ## Exercice 7

@@ -18,9 +18,7 @@ button{
 
 .patientList{
     border-bottom: solid 1px #013e58 ;
-    border-left:solid 1px #013e58 ;
     padding-left: 15px;
-
 }
 
 .patientList:hover{
@@ -31,15 +29,19 @@ button{
     color:#013e58 ;
 }
 
-.ajoutPatient{
-    background-color: #013e58 !important;
+
+
+body{
+    background-image: url("https://e0.pxfuel.com/wallpapers/815/325/desktop-wallpaper-background-for-hospital-website-tip.jpg");
+    background-position: center;
+    background-size: 150%;
+    background-repeat: no-repeat;
 }
 
 
-/* .test-bg{
-    background-color: red;
-} */
-
-/* body{
-    background-color: red !important;
-} */
+.container{
+    margin-top: 50px;
+    background-color: #d8f0f9 !important;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+}
