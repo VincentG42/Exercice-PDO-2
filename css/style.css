@@ -1,0 +1,45 @@
+h2{
+    color:#013e58;
+    text-decoration: underline;
+}
+
+button{
+    background-color: #013e58;
+}
+
+.titreIndex{
+    color: white;
+    background-color:#013e58 ;
+}
+
+.patientCard{
+    border: solid #013e58 2px;
+}
+
+.patientList{
+    border-bottom: solid 1px #013e58 ;
+    border-left:solid 1px #013e58 ;
+    padding-left: 15px;
+
+}
+
+.patientList:hover{
+    background-color: #013e585a;
+}
+
+.linkFichePatient{
+    color:#013e58 ;
+}
+
+.ajoutPatient{
+    background-color: #013e58 !important;
+}
+
+
+/* .test-bg{
+    background-color: red;
+} */
+
+/* body{
+    background-color: red !important;
+} */

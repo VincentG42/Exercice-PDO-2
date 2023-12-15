@@ -30,5 +30,6 @@ if (
         'email' => $email
     ]);
 
-    header('Location: ../index.php');
 }
+
+header('Location: ../index.php');
