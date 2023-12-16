@@ -49,47 +49,66 @@ $patient = $request->fetch();
             <p> Téléphone: <?php echo  $patient["phone"] ?></p>
             <p> E-mail: <?php echo  $patient["mail"] ?></p>
         </div>
-    </div>
-
-    <div class="container mt-5 py-5">
-        <h2 class=text-center>Modifications des informations</h2>
-        <div class="row justify-content-center">
-            <!-- form modif donnees-->
-            <form class=" col-2" action="../treatment/modif-patient.php" method="post">
-                <div class="d-flex  flex-column justify-content-center">
-
-                    <label class="text-center" for="lastname">Nom</label>
-                    <input type="text" id="fname" name="lastname" value="<?php echo $patient["lastname"] ?>">
-
-                    <label class="text-center" for="firstname">Prenom</label>
-                    <input type="text" id="firstname" name="firstname" value="<?php echo $patient["firstname"] ?>">
-
-                    <label class="text-center" for="birthdate">Date de naissance</label>
-                    <input type="date" id="birthdate" name="birthdate" value="<?php echo $patient["birthdate"] ?>">
-
-                    <label class="text-center" for="phone">N° téléphone</label>
-                    <input class="input-group" type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" value="<?php echo $patient["phone"] ?>">
-
-                    <label class="text-center" for="mail">Email</label>
-                    <input type="mail" id="mail" name="mail" value="<?php echo $patient["mail"] ?>">
-
-                    <input type="hidden" name="idPatient" value="<?php echo $patient["id"] ?>" />
-                    <button type="submit" class="text-white rounded-1 py-2 justify-content-center mt-2 mx-2">Soumettre</button>
-                </div>
+        <div class="row justify-content-around my-5">
+            <!-- Button trigger modal -->
+            <button type="button" class="text-white rounded-1 py-2 justify-content-center col-4 mx-2 mb-3" 
+                    data-bs-toggle="modal" data-bs-target="#modifpatientModal">
+                Modifications des informations
+            </button>       
+            <form action="../treatment/suppression-patient.php" method="post" class="col-3">
+                <input type="hidden" name="idPatient" value="<?php echo $patient["id"] ?>" />
+                <button type="submit" class="text-danger rounded-1 justify-content-center py-2 mx-2 mb-3">
+                    Supprimer le patient
+                </button>
             </form>
-
+                
         </div>
-        <form action="../treatment/suppression-patient.php" method="post">
-            <div class="row justify-content-end align-item-end me-5"><!--bouton supprimer patient-->
-                <form action="../treatment/suppression-patient.php" method="post">
-                    <input type="hidden" name="idPatient" value="<?php echo $patient["id"] ?>" />
-                    <button type="submit" class="text-danger rounded-1 py-2 justify-content-center mt-2 mx-2 col-2">Supprimer le patient</button>
-                </form>
-            </div>
-
-        </form>
 
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modifpatientModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form class=" col-12" action="../treatment/modif-patient.php" method="post">
+                        <div class="d-flex  flex-column justify-content-center">
+
+                            <label class="text-center" for="lastname">Nom</label>
+                            <input type="text" id="fname" name="lastname" value="<?php echo $patient["lastname"] ?>">
+
+                            <label class="text-center" for="firstname">Prenom</label>
+                            <input type="text" id="firstname" name="firstname" value="<?php echo $patient["firstname"] ?>">
+
+                            <label class="text-center" for="birthdate">Date de naissance</label>
+                            <input type="date" id="birthdate" name="birthdate" value="<?php echo $patient["birthdate"] ?>">
+
+                            <label class="text-center" for="phone">N° téléphone</label>
+                            <input class="input-group" type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" value="<?php echo $patient["phone"] ?>">
+
+                            <label class="text-center" for="mail">Email</label>
+                            <input type="mail" id="mail" name="mail" value="<?php echo $patient["mail"] ?>">
+
+                            <input type="hidden" name="idPatient" value="<?php echo $patient["id"] ?>" />
+                            <button type="submit" class="text-white rounded-1 py-2 justify-content-center mt-2 mx-2">Soumettre</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
