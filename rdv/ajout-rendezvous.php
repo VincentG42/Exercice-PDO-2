@@ -40,14 +40,14 @@ $patients = $request->fetchAll();
         </div>
         <h2 class="text-center py-4">Nouveau Rendez-vous</h2>
         <div class="row justify-content-center">
-            <form class="col-6 py-5" action="../treatment/rdv-to-db.php" method="post">
+            <form class="py-5" action="../treatment/rdv-to-db.php" method="post">
 
                 <label  class="py-1" for="appointmentDate">Selection Patient:</label><br>
                 <select  class="py-1" name="idPatient" id="idPatient">
                     <option value="">--Choissisez un patient--</option>
 
                     <?php foreach ($patients as $patient) { ?>
-                              <option value=""><?php echo $patient["lastname"] ?> <?php echo $patient["firstname"] ?></option>
+                              <option value="<?php echo $patient["id"] ?>"><?php echo $patient["lastname"] ?> <?php echo $patient["firstname"] ?></option>
                     <?php } ?>
                 </select><br>
                 <label class="py-1" for="appointmentDate">Date de rendez-vous:</label><br>
