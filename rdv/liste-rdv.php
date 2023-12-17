@@ -42,9 +42,9 @@ $rdvs = $request->fetchAll();
                                     <p class="col-3"><span class="text-secondary"> Date rendez-vous: </span><span class="fw-bold"><?php echo $rdv["dateHour"] ?> </span></p>
                                  </div>
                                 <div class="col-6">
-                                    <form action="./" method="get"><!--page details rdv-->
-                                        <input type="hidden" name="idPatient" value="<?php echo $rdv["id"]?>" />
-                                        <button type="submit" class="rounded-1 py-2 text-white col-3 mx-2 mb-2">Details rendez_vous</button>
+                                    <form action="./rendezvous.php" method="get"><!--page details rdv-->
+                                        <input type="hidden" name="idRDV" value="<?php echo $rdv["id"]?>" />
+                                        <button type="submit" class="rounded-1 py-2 text-white col-3 mx-2 mb-2">Details rendez-vous</button>
                                     </form>
                                 </div>
 
@@ -57,9 +57,9 @@ $rdvs = $request->fetchAll();
             ?>  
         </div>
 
-        <div class="row justify-content-center align-item-center"><!--bouton enregistrer patient-->
+        <div class="row justify-content-center align-item-center"><!--bouton enregistrer rdv-->
             <button class = "rounded-1 py-2 justify-content-center mt-5 col-3">
-                <a  class ="link-underline link-underline-opacity-0 text-white" href="./ajout-rendezvous.php">Enregistrer un nouveau rendez_voust</a>
+                <a  class ="link-underline link-underline-opacity-0 text-white" href="./ajout-rendezvous.php">Enregistrer un nouveau rendez_vous</a>
             </button>   
         </div>
         

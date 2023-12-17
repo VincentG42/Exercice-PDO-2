@@ -7,7 +7,7 @@
  if (
     isset($_POST['idPatient']) && !empty($_POST['idPatient'])
     && isset($_POST['appointmentDate']) && !empty($_POST['appointmentDate']) ){
-        var_dump($_POST);
+        // var_dump($_POST);
         require_once('./database_connect.php');
         $appointmentDate = $_POST['appointmentDate'];
         $idPatient = $_POST['idPatient'];

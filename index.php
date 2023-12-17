@@ -29,6 +29,9 @@ require_once('./treatment/database_connect.php');
             <button class="rounded-1 py-2 justify-content-center mt-5 col-2 mx-2 ">
                 <a  class ="link-underline link-underline-opacity-0 text-white" href="./rdv/ajout-rendezvous.php">Ajout de rendez-vous</a>
             </button>
+            <button class="rounded-1 py-2 justify-content-center mt-5 col-2 mx-2 ">
+                <a  class ="link-underline link-underline-opacity-0 text-white" href="./rdv/liste-rdv.php">Liste des rendez-vous</a>
+            </button>
         </div>
  
         

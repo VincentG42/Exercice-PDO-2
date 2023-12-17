@@ -4,7 +4,7 @@ require_once('../treatment/database_connect.php');
 $idPatient = $_GET["idPatient"];
 
 
-$request = $database->query('SELECT * FROM `patients` WHERE id=' . "$idPatient");
+$request = $database->query('SELECT * FROM `patients` WHERE appointments.id=' . "$idPatient");
 
 $patient = $request->fetch();
 

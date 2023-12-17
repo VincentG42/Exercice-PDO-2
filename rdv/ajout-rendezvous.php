@@ -6,10 +6,6 @@ $request = $database->query('SELECT * FROM `patients`');
 $patients = $request->fetchAll();
 
 
-
-// Créer une page ajout-rendezvous.php et y créer un formulaire permettant de 
-// créer un rendez-vous. Elle doit être accessible depuis la page index.php.
-
 ?>
 
 
